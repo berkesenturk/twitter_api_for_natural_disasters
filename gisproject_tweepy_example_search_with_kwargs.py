@@ -7,7 +7,7 @@ def home_timeline():
 
     Gathers the home stream of the current time 
     """
-    public_tweets = api.home_timeline()
+    public_tweets = api.search(q='earthquake')
     for tweet in public_tweets:
         print(tweet.text)
 
@@ -33,11 +33,3 @@ if __name__ == "__main__":
     auth.set_access_token(access_token, access_token_secret)
     api = tweepy.API(auth)
     home_timeline()
-
-
-
-
-
-
-
-    
